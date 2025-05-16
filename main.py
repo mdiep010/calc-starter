@@ -2,11 +2,10 @@ from operations import add, sub, mult, div
 import sys
 
 def main():
-    if len(sys.argv) != 4:
-        print("Usage: calc <num1> <operator> <num2>")
-        sys.exit(1)
+    num1 = input("Enter the number:")
+    op = input("Enter an operation:")
+    num2 = input("Enter the number:")
 
-    _, num1, op, num2 = sys.argv
     try:
         num1 = float(num1)
         num2 = float(num2)
@@ -26,6 +25,7 @@ def main():
         else:
             print("Invalid operator. Use +, -, *, /")
             sys.exit(1)
+            
     except ValueError as e:
         print(str(e))
         sys.exit(1)
